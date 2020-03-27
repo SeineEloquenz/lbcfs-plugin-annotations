@@ -1,15 +1,10 @@
 package org.bukkit.plugin.java.annotation.plugin;
 
-import com.google.common.collect.Lists;
-import com.google.common.collect.Sets;
-
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
-import java.util.Collection;
-
 
 /**
  * This annotation specifies the api version of the plugin.
@@ -39,24 +34,16 @@ public @interface ApiVersion {
         /**
          * This target version specifies that the plugin was made with 1.13+ versions in mind.
          */
-        v1_13( "1.13", DEFAULT );
-
+        v1_13( "1.13" );
 
         private final String version;
-        private final Collection<Target> conflictsWith = Sets.newLinkedHashSet();
 
-        private Target(String version, Target... conflictsWith) {
+        private Target(String version) {
             this.version = version;
-            this.conflictsWith.addAll( Lists.newArrayList( conflictsWith ) );
         }
-
 
         public String getVersion() {
             return version;
-        }
-
-        public boolean conflictsWith(Target target) {
-            return this.conflictsWith.contains( target );
         }
     }
 }
