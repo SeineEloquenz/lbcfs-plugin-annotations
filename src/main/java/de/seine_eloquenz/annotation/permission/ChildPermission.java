@@ -1,4 +1,4 @@
-package org.bukkit.plugin.java.annotation.permission;
+package de.seine_eloquenz.annotation.permission;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

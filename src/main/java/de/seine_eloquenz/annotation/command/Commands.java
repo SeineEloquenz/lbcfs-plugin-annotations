@@ -1,4 +1,4 @@
-package org.bukkit.plugin.java.annotation.command;
+package de.seine_eloquenz.annotation.command;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

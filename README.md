@@ -25,9 +25,9 @@ public class TestPlugin extends JavaPlugin {
 Output:
 
 ```
-# Auto-generated plugin.yml, generated at 2018/07/12 22:16:27 by org.bukkit.plugin.java.annotation.PluginAnnotationProcessor
+# Auto-generated plugin.yml, generated at 2018/07/12 22:16:27 by de.seine_eloquenz.annotation.PluginAnnotationProcessor
 
-# Auto-generated plugin.yml, generated at 2018/07/13 00:16:24 by org.bukkit.plugin.java.annotation.PluginAnnotationProcessor
+# Auto-generated plugin.yml, generated at 2018/07/13 00:16:24 by de.seine_eloquenz.annotation.PluginAnnotationProcessor
 
 main: org.spigotmc.spigot.TestPlugin
 name: TestPlugin

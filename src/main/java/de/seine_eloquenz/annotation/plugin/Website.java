@@ -1,4 +1,4 @@
-package org.bukkit.plugin.java.annotation.plugin;
+package de.seine_eloquenz.annotation.plugin;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -9,15 +9,15 @@ import java.lang.annotation.Target;
 /**
  *  Part of the plugin annotations framework.
  *  <p>
- *  Represents the prefix used for the plugin's log entries, defaults to plugin name.
+ *  Represents the website of the plugin.
  */
 
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-public @interface LogPrefix {
+public @interface Website {
     /**
-     * The name to use when logging to console instead of the plugin's name.
+     * The url to the website where a user can download this plugin.
      */
     String value();
 }

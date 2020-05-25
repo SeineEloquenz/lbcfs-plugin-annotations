@@ -8,32 +8,20 @@
         <version>9</version>
     </parent>
 
-    <groupId>org.spigotmc</groupId>
-    <artifactId>plugin-annotations</artifactId>
+    <groupId>de.seine_eloquenz</groupId>
+    <artifactId>lbcfs-plugin-annotations</artifactId>
     <version>1.2.3-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Plugin Annotations</name>
+    <name>Lbcfs Plugin Annotations</name>
     <url>http://www.spigotmc.org/</url>
-    <description>A annotation-based compile time plugin.yml generator.</description>
+    <description>A annotation-based compile time plugin.yml generator. - edited for compatibility to LBCFS</description>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
-    <!-- just until we get deployment to central approved -->
-    <distributionManagement>
-        <repository>
-            <id>spigotmc-releases</id>
-            <url>https://hub.spigotmc.org/nexus/content/repositories/releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>spigotmc-releases</id>
-            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
 
     <!-- required until fixed plexus-compiler-eclipse is deployed -->
     <pluginRepositories>
@@ -120,6 +108,13 @@
             <resource>
                 <directory>src/main/resources/META-INF</directory>
                 <targetPath>META-INF</targetPath>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>plugin.yml</include>
+                </includes>
+                <targetPath>.</targetPath>
             </resource>
         </resources>
     </build>

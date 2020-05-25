@@ -1,25 +1,25 @@
-package org.bukkit.plugin.java.annotation;
+package de.seine_eloquenz.annotation;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.permissions.PermissionDefault;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.plugin.java.annotation.command.Command;
-import org.bukkit.plugin.java.annotation.command.Commands;
-import org.bukkit.plugin.java.annotation.dependency.Dependency;
-import org.bukkit.plugin.java.annotation.dependency.LoadBefore;
-import org.bukkit.plugin.java.annotation.dependency.SoftDependency;
-import org.bukkit.plugin.java.annotation.permission.ChildPermission;
-import org.bukkit.plugin.java.annotation.permission.Permission;
-import org.bukkit.plugin.java.annotation.permission.Permissions;
-import org.bukkit.plugin.java.annotation.plugin.ApiVersion;
-import org.bukkit.plugin.java.annotation.plugin.Description;
-import org.bukkit.plugin.java.annotation.plugin.LoadOrder;
-import org.bukkit.plugin.java.annotation.plugin.LogPrefix;
-import org.bukkit.plugin.java.annotation.plugin.Plugin;
-import org.bukkit.plugin.java.annotation.plugin.Website;
-import org.bukkit.plugin.java.annotation.plugin.author.Author;
+import de.seine_eloquenz.annotation.command.Command;
+import de.seine_eloquenz.annotation.command.Commands;
+import de.seine_eloquenz.annotation.dependency.Dependency;
+import de.seine_eloquenz.annotation.dependency.LoadBefore;
+import de.seine_eloquenz.annotation.dependency.SoftDependency;
+import de.seine_eloquenz.annotation.permission.ChildPermission;
+import de.seine_eloquenz.annotation.permission.Permission;
+import de.seine_eloquenz.annotation.permission.Permissions;
+import de.seine_eloquenz.annotation.plugin.ApiVersion;
+import de.seine_eloquenz.annotation.plugin.Description;
+import de.seine_eloquenz.annotation.plugin.LoadOrder;
+import de.seine_eloquenz.annotation.plugin.LogPrefix;
+import de.seine_eloquenz.annotation.plugin.Plugin;
+import de.seine_eloquenz.annotation.plugin.Website;
+import de.seine_eloquenz.annotation.plugin.author.Author;
 import org.yaml.snakeyaml.DumperOptions;
 import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.nodes.Tag;
@@ -50,7 +50,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
-@SupportedAnnotationTypes( "org.bukkit.plugin.java.annotation.*" )
+@SupportedAnnotationTypes( "de.seine_eloquenz.annotation.*" )
 @SupportedSourceVersion( SourceVersion.RELEASE_8 )
 public class PluginAnnotationProcessor extends AbstractProcessor {
 
