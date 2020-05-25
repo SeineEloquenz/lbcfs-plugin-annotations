@@ -172,7 +172,7 @@ public class PluginAnnotationProcessor extends AbstractProcessor {
         // commands
         // Begin processing external command annotations
         Map<String, Map<String, Object>> commandMap = Maps.newLinkedHashMap();
-        boolean validCommandExecutors = processExternalCommands( rEnv.getElementsAnnotatedWith( Commands.class ), mainPluginType, commandMap );
+        boolean validCommandExecutors = processExternalCommands( rEnv.getElementsAnnotatedWith( Command.class ), mainPluginType, commandMap );
         if ( !validCommandExecutors ) {
             // #processExternalCommand already raised the errors
             return false;
@@ -350,10 +350,10 @@ public class PluginAnnotationProcessor extends AbstractProcessor {
                 this.raiseError( "Specified Command Executor class is not assignable from CommandExecutor " );
                 return false;
             }
-
-            Commands annotation = typeElement.getAnnotation( Commands.class );
-            if ( annotation != null && annotation.value().length > 0 ) {
-                commandMetadata.putAll( this.processCommands( annotation ) );
+            Command annotation = typeElement.getAnnotation(Command.class);
+            if (annotation != null) {
+                Map<String, Object> map = this.processCommand(annotation);
+                commandMetadata.put( annotation.name(), this.processCommand(annotation) );
             }
         }
         return true;
