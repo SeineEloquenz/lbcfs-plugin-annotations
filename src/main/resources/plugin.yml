@@ -1,3 +1,4 @@
 name: Lbcfs-Plugin-Annotations
 main: de.seine_eloquenz.annotation.PluginAnnotations
 version: 1.2.3
+api-version: '1.15'
